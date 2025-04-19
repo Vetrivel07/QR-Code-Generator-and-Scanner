@@ -1,5 +1,6 @@
 import qrcode
 from PIL import Image, ImageDraw, ImageFont
+import os
 
 linkedin_url = "https://www.linkedin.com/in/vetrivel-maheswaran/"
 
@@ -27,5 +28,5 @@ text_height = bbox[3] - bbox[1]
 
 draw.text(((img_width - text_width) / 2, img_height + 5), text, font=font, fill="black")
 
-new_img.save("my_qrcode.png")
-
+image_path = os.path.join("D:\Github\QR-Code-Generator-and-Scanner\Qr_code\Qr_code_img", "my_qrcode.png")
+new_img.save(image_path)
